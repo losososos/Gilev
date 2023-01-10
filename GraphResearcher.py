@@ -2,7 +2,7 @@ def symm(inputArr, n):
     fl = 0
     for i in range(len(inputArr)):
         pair = list(reversed(inputArr[i]))
-        for j in range(i, len(inputArr)):
+        for j in range(i+1, len(inputArr)):
             if pair == inputArr[j]:
                 fl += 1
     if float(fl) == float(n) / 2:
