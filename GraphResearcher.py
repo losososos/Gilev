@@ -23,9 +23,9 @@ def refl(inputArr, n):
             fl = True
             count += 1
     if (n != count) and fl:
-        print("Нерефлексивный")
-    elif not fl:
         print("Антирефлексивный")
+    elif not fl:
+        print("Нерефлексивный")
     elif fl and (n == count):
         print("Рефлексивный")
 
@@ -63,5 +63,5 @@ for i in range(infoArr[0]):
     inputArr.append([int(x) for x in strin.split()])
 
 symm(inputArr, infoArr[0])
-refl(inputArr, infoArr[0])
+refl(inputArr, infoArr[1])
 trnz(inputArr)
