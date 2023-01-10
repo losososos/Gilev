@@ -1,4 +1,4 @@
 # Gilev
 DiscreteMathCalc
 
-![изображение](https://user-images.githubusercontent.com/112784018/211573936-645419e6-6e0f-47cc-9acf-4e7b2aed4b08.png)
+![изображение](https://user-images.githubusercontent.com/112784018/211576190-8cf19edf-c7e7-4484-9ae3-e05c2fd0d338.png)
