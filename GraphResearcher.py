@@ -18,14 +18,11 @@ def refl(inputArr, m):
     fl = False
     count = 0
     vert = [i for i in range(1, m + 1)]
-    print(vert)
     for i in range(len(inputArr)):
         pair = inputArr[i]
-        print(pair)
         if pair[0] == pair[1]:
             fl = True
             count += 1
-    print(count,len(vert))
     if (len(vert) != count) and fl:
         print("Нерефлексивный")
     elif not fl:
