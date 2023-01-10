@@ -16,16 +16,21 @@ def symm(inputArr, n):
 
 def refl(inputArr, m):
     fl = False
+    count = 0
     vert = [i for i in range(1, m + 1)]
+    print(vert)
     for i in range(len(inputArr)):
         pair = inputArr[i]
+        print(pair)
         if pair[0] == pair[1]:
             fl = True
-    if not (len(vert) == 0) and fl:
+            count += 1
+    print(count,len(vert))
+    if (len(vert) != count) and fl:
         print("Нерефлексивный")
-    elif not (fl):
+    elif not fl:
         print("Антирефлексивный")
-    elif fl and (len(vert) == 0):
+    elif fl and (len(vert) == count):
         print("Рефлексивный")
 
 
@@ -57,7 +62,7 @@ def trnz(inputArr):
 strin = input()
 inputArr = []
 infoArr = [int(strin.split()[0]), int(strin.split()[1])]
-for i in range(infoArr[1]):
+for i in range(infoArr[0]):
     strin = input()
     inputArr.append([int(x) for x in strin.split()])
 
