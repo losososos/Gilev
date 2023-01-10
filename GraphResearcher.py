@@ -2,16 +2,15 @@ def symm(inputArr, n):
     fl = 0
     for i in range(len(inputArr)):
         pair = list(reversed(inputArr[i]))
-
-        for j in range(i + 1, len(inputArr)):
+        for j in range(i, len(inputArr)):
             if pair == inputArr[j]:
                 fl += 1
-    if fl == 0:
-        print("Антисимметричный")
-    elif (n % 2 != 0) and (fl > 0):
-        print("Несимметричный")
-    elif n / 2 == fl:
+    if float(fl) == float(n) / 2:
         print("Симметричный")
+    elif fl == 0:
+        print("Несимметричный")
+    else:
+        print("Антисимметричный")
 
 
 def refl(inputArr, n):
@@ -48,11 +47,11 @@ def trnz(inputArr):
             else:
                 flnot = True
     if fl and flnot:
-        print("Нетранзитивный")
-    elif fl and not (flnot):
-        print("Транзитивный")
-    else:
         print("Антитранзитивный")
+    elif fl and not (flnot):
+        print("Нетранзитивный")
+    else:
+        print("Транзитивный")
 
 
 strin = input()
