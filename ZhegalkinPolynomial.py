@@ -5,6 +5,7 @@ def abc(num, lenth):
             strnum = '0' + strnum
     return strnum
 
+
 n = int(input())
 inputArr = []
 for i in range(2 ** n):
