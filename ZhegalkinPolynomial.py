@@ -21,8 +21,10 @@ for i in range(n):
 for i in range(len(inputArr)):
     calcArr.append(inputArr[i][len(inputArr[i]) - 1])
 
+fl = False
 if calcArr[0] == 1:
     print(1, end='')
+    fl = True
 
 for i in range(1, 2 ** n):
     lett = ''
@@ -37,4 +39,8 @@ for i in range(1, 2 ** n):
         for k in range(len(abc(i, len(lettArr)))):
             if abc(i, len(lettArr))[k] == '1':
                 lett = lett + lettArr[k]
-        print(" + ", lett,  end='')
+        if not fl:
+            print(lett, end='')
+            fl = True
+        else:
+            print(" + ", lett, end='')
