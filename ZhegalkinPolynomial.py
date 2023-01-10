@@ -31,7 +31,7 @@ for i in range(1, 2 ** n):
 
     for j in range(len(calcArr) - 1):
         tempArr = calcArr
-        if (tempArr[j] or tempArr[j + 1]) == 1:
+        if (tempArr[j] != tempArr[j + 1]) == 1:
             calcArr[j] = 1
         else:
             calcArr[j] = 0
