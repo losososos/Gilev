@@ -14,20 +14,19 @@ def symm(inputArr, n):
         print("Симметричный")
 
 
-def refl(inputArr, m):
+def refl(inputArr, n):
     fl = False
     count = 0
-    vert = [i for i in range(1, m + 1)]
     for i in range(len(inputArr)):
         pair = inputArr[i]
         if pair[0] == pair[1]:
             fl = True
             count += 1
-    if (len(vert) != count) and fl:
+    if (n != count) and fl:
         print("Нерефлексивный")
     elif not fl:
         print("Антирефлексивный")
-    elif fl and (len(vert) == count):
+    elif fl and (n == count):
         print("Рефлексивный")
 
 
@@ -64,5 +63,5 @@ for i in range(infoArr[0]):
     inputArr.append([int(x) for x in strin.split()])
 
 symm(inputArr, infoArr[0])
-refl(inputArr, infoArr[1])
+refl(inputArr, infoArr[0])
 trnz(inputArr)
