@@ -2,8 +2,8 @@ def symm(inputArr, n):
     fl = 0
     for i in range(len(inputArr)):
         pair = list(reversed(inputArr[i]))
-        for j in range(i+1, len(inputArr)):
-            if pair == inputArr[j]:
+        for j in range(len(inputArr)):
+            if pair == inputArr[j] and i != j:
                 fl += 1
     if float(fl) == float(n) / 2:
         print("Симметричный")
