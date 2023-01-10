@@ -5,7 +5,6 @@ def abc(num, lenth):
             strnum = '0' + strnum
     return strnum
 
-
 n = int(input())
 inputArr = []
 for i in range(2 ** n):
@@ -37,5 +36,4 @@ for i in range(1, 2 ** n):
         for k in range(len(abc(i, len(lettArr)))):
             if abc(i, len(lettArr))[k] == '1':
                 lett = lett + lettArr[k]
-
         print(" + ", lett,  end='')
