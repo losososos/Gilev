@@ -46,13 +46,10 @@ def trnz(inputArr):
                     elemArr.append(pairj[1])
                 elif (pairj[0] != pairj[1]) and (pairi[0] != pairi[1]) and (pairi != pairj):
                     flnot = True
-                print(pairi, pairj, ppair, fl, flnot)
             elif pairi[0] not in elemArr and pairi[1] not in elemArr and pairj[1] not in elemArr and (
                     pairj[0] != pairj[1]) and (
                     pairi[0] != pairi[1]) and (pairi != pairj):
                 flnot = True
-                print(pairi, pairj, fl, flnot)
-
     if fl and flnot:
         print("Антитранзитивный")
     elif fl and not (flnot):
