@@ -37,19 +37,18 @@ def trnz(inputArr):
         for j in range(len(inputArr)):
             pairi = inputArr[i]
             pairj = inputArr[j]
-            if (pairj[0] != pairj[1]) and (pairi[0] != pairi[1]) and (pairi[1] == pairj[0]) and (pairi[0] != pairj[1]):
-                ppair = [pairj[1], pairi[0]]
-                if ppair in inputArr:
-                    fl = True
-                    elemArr.append(pairi[0])
-                    elemArr.append(pairi[1])
-                    elemArr.append(pairj[1])
-                elif (pairj[0] != pairj[1]) and (pairi[0] != pairi[1]) and (pairi != pairj):
+            if pairj[0] != pairj[1] and pairi[0] != pairi[1] and pairi != pairj:
+                if pairi[1] == pairj[0] and pairi[0] != pairj[1]:
+                    ppair = [pairj[1], pairi[0]]
+                    if ppair in inputArr:
+                        fl = True
+                        elemArr.append(pairi[0])
+                        elemArr.append(pairi[1])
+                        elemArr.append(pairj[1])
+                    else:
+                        flnot = True
+                elif pairi[0] not in elemArr and pairi[1] not in elemArr and pairj[1] not in elemArr:
                     flnot = True
-            elif pairi[0] not in elemArr and pairi[1] not in elemArr and pairj[1] not in elemArr and (
-                    pairj[0] != pairj[1]) and (
-                    pairi[0] != pairi[1]) and (pairi != pairj):
-                flnot = True
     if fl and flnot:
         print("Антитранзитивный")
     elif fl and not (flnot):
