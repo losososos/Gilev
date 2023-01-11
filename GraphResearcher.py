@@ -32,26 +32,33 @@ def refl(inputArr, n):
 def trnz(inputArr):
     fl = False
     flnot = False
+    elemArr = []
     for i in range(len(inputArr)):
-        for j in range(i + 1, len(inputArr)):
+        for j in range(len(inputArr)):
             pairi = inputArr[i]
             pairj = inputArr[j]
-            if (pairi[1] == pairj[0]) and not (pairi[0] == pairj[1]):
-                ppair = []
-                ppair.append(pairi[0])
-                ppair.append(pairj[1])
+            if (pairj[0] != pairj[1]) and (pairi[0] != pairi[1]) and (pairi[1] == pairj[0]) and (pairi[0] != pairj[1]):
+                ppair = [pairj[1], pairi[0]]
                 if ppair in inputArr:
                     fl = True
-                else:
+                    elemArr.append(pairi[0])
+                    elemArr.append(pairi[1])
+                    elemArr.append(pairj[1])
+                elif (pairj[0] != pairj[1]) and (pairi[0] != pairi[1]) and (pairi != pairj):
                     flnot = True
-            else:
+                print(pairi, pairj, ppair, fl, flnot)
+            elif pairi[0] not in elemArr and pairi[1] not in elemArr and pairj[1] not in elemArr and (
+                    pairj[0] != pairj[1]) and (
+                    pairi[0] != pairi[1]) and (pairi != pairj):
                 flnot = True
+                print(pairi, pairj, fl, flnot)
+
     if fl and flnot:
         print("Антитранзитивный")
     elif fl and not (flnot):
-        print("Нетранзитивный")
-    else:
         print("Транзитивный")
+    else:
+        print("Нетранзитивный")
 
 
 strin = input()
